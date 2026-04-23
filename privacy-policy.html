@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Famploy Copilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:  #0A0F1E;
+    --blue:  #2563EB;
+    --blue-pale: #EFF6FF;
+    --blue-mid:  #DBEAFE;
+    --mint:  #10B981;
+    --mint-light: #D1FAE5;
+    --gray-50:  #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: #FAFBFF;
+    color: var(--gray-900);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: linear-gradient(135deg, #0F1D3D 0%, #1E3A8A 50%, #5B21B6 100%);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-mark {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; flex-shrink: 0;
+  }
+
+  .logo-mark img { width: 28px; height: 28px; object-fit: contain; }
+
+  .logo-text { font-size: 16px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
+  .logo-sub  { font-size: 10px; color: rgba(255,255,255,.5); margin-top: 1px; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, #0F1D3D 0%, #1E3A8A 55%, #5B21B6 100%);
+    padding: 64px 24px 72px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,.03);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 220px; height: 220px;
+    background: rgba(16,185,129,.06);
+    border-radius: 50%;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 99px;
+    padding: 5px 14px;
+    font-size: 11px; font-weight: 700; color: rgba(255,255,255,.8);
+    text-transform: uppercase; letter-spacing: .8px;
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800; color: #fff;
+    letter-spacing: -.8px; line-height: 1.15;
+    margin-bottom: 14px;
+    position: relative; z-index: 1;
+  }
+
+  .hero p {
+    font-size: 15px; color: rgba(255,255,255,.6);
+    max-width: 520px; margin: 0 auto;
+    line-height: 1.7;
+    position: relative; z-index: 1;
+  }
+
+  .hero-updated {
+    margin-top: 20px;
+    font-size: 12px; color: rgba(255,255,255,.4);
+    position: relative; z-index: 1;
+  }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 780px;
+    margin: -32px auto 0;
+    padding: 0 24px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── TOC ── */
+  .toc {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 36px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.06);
+  }
+
+  .toc-title {
+    font-size: 11px; font-weight: 800; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: .8px;
+    margin-bottom: 14px;
+  }
+
+  .toc-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+  }
+
+  .toc-list a {
+    font-size: 13px; font-weight: 600; color: var(--blue);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 6px;
+    transition: color .15s ease;
+  }
+
+  .toc-list a:hover { color: #1D4ED8; }
+  .toc-list a::before { content: '→'; font-size: 11px; opacity: .6; }
+
+  /* ── SECTIONS ── */
+  section {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    scroll-margin-top: 90px;
+  }
+
+  .section-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px;
+    background: var(--blue-pale); border: 1.5px solid var(--blue-mid);
+    border-radius: 8px;
+    font-size: 12px; font-weight: 800; color: var(--blue);
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 18px; font-weight: 800; color: var(--navy);
+    letter-spacing: -.3px; margin-bottom: 14px;
+  }
+
+  p { font-size: 14px; color: var(--gray-700); margin-bottom: 12px; line-height: 1.75; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ── DATA TABLE ── */
+  .data-table {
+    width: 100%; border-collapse: collapse;
+    margin: 16px 0; font-size: 13px;
+  }
+
+  .data-table th {
+    background: var(--gray-50);
+    padding: 10px 14px; text-align: left;
+    font-size: 10px; font-weight: 800;
+    color: var(--gray-400); text-transform: uppercase; letter-spacing: .6px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .data-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-700);
+    font-weight: 500;
+    vertical-align: top;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: var(--gray-50); }
+
+  /* ── HIGHLIGHT BOXES ── */
+  .info-box {
+    background: var(--blue-pale);
+    border: 1px solid var(--blue-mid);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 14px 0;
+    font-size: 13.5px; color: var(--blue);
+    font-weight: 500; line-height: 1.65;
+  }
+
+  .success-box {
+    background: var(--mint-light);
+    border: 1px solid rgba(16,185,129,.25);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 14px 0;
+    font-size: 13.5px; color: #065F46;
+    font-weight: 500; line-height: 1.65;
+    display: flex; gap: 10px;
+  }
+
+  /* ── LIST ── */
+  ul.pp-list {
+    list-style: none;
+    margin: 10px 0 14px;
+    display: flex; flex-direction: column; gap: 7px;
+  }
+
+  ul.pp-list li {
+    font-size: 13.5px; color: var(--gray-700);
+    padding-left: 20px; position: relative;
+    line-height: 1.6; font-weight: 500;
+  }
+
+  ul.pp-list li::before {
+    content: '•';
+    position: absolute; left: 0;
+    color: var(--blue); font-weight: 800;
+  }
+
+  /* ── THIRD PARTY CARDS ── */
+  .third-party-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 10px; margin: 14px 0;
+  }
+
+  .tp-card {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 14px;
+    text-align: center;
+  }
+
+  .tp-icon { font-size: 22px; margin-bottom: 6px; display: block; }
+  .tp-name { font-size: 12px; font-weight: 800; color: var(--navy); }
+  .tp-use  { font-size: 11px; color: var(--gray-500); margin-top: 3px; }
+
+  /* ── CONTACT ── */
+  .contact-card {
+    background: linear-gradient(135deg, #0F1D3D, #1E3A8A);
+    border-radius: 16px; padding: 28px;
+    text-align: center; margin-top: 32px;
+    position: relative; overflow: hidden;
+  }
+
+  .contact-card::before {
+    content: '';
+    position: absolute; top: -40px; right: -40px;
+    width: 140px; height: 140px;
+    background: rgba(255,255,255,.04); border-radius: 50%;
+  }
+
+  .contact-card h3 {
+    font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 8px;
+  }
+
+  .contact-card p { font-size: 13px; color: rgba(255,255,255,.6); margin-bottom: 16px; }
+
+  .contact-email {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 99px; padding: 10px 22px;
+    color: #fff; font-weight: 700; font-size: 14px;
+    text-decoration: none; transition: all .2s ease;
+  }
+
+  .contact-email:hover { background: rgba(255,255,255,.2); }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 12px; color: var(--gray-400);
+    border-top: 1px solid var(--gray-200);
+  }
+
+  footer a { color: var(--blue); text-decoration: none; font-weight: 600; }
+
+  @media (max-width: 600px) {
+    .toc-list { grid-template-columns: 1fr; }
+    .third-party-grid { grid-template-columns: 1fr 1fr; }
+    section { padding: 20px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo-mark">
+      <img src="data:image/png;base64,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" alt="Famploy">
+    </div>
+    <div>
+      <div class="logo-text">Famploy Copilot</div>
+      <div class="logo-sub">Chrome Extension</div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">📄 Legal Document</div>
+  <h1>Privacy Policy</h1>
+  <p>We believe in complete transparency about what data we collect, how we use it, and how we protect it.</p>
+  <div class="hero-updated">Last updated: April 23, 2025 &nbsp;·&nbsp; Effective immediately</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#s1">What We Collect</a></li>
+      <li><a href="#s2">How We Use Data</a></li>
+      <li><a href="#s3">Data Storage</a></li>
+      <li><a href="#s4">Third Party Services</a></li>
+      <li><a href="#s5">Your Rights</a></li>
+      <li><a href="#s6">Data Security</a></li>
+      <li><a href="#s7">Children's Privacy</a></li>
+      <li><a href="#s8">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 1 -->
+  <section id="s1">
+    <div class="section-num">1</div>
+    <h2>What Data We Collect</h2>
+
+    <div class="success-box">
+      <span>🔒</span>
+      <span>Famploy Copilot is <strong>local-first</strong>. Your profile data is stored on your own device using Chrome's built-in storage. We never sell your data or share it with advertisers.</span>
+    </div>
+
+    <p>When you set up your profile in Famploy Copilot, you provide:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Examples</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Personal Info</strong></td>
+          <td>Name, email, phone, location</td>
+          <td>Autofill job application forms</td>
+        </tr>
+        <tr>
+          <td><strong>Professional Info</strong></td>
+          <td>Current title, experience, skills, bio, CTC</td>
+          <td>Generate cover letters, autofill fields</td>
+        </tr>
+        <tr>
+          <td><strong>Online Profiles</strong></td>
+          <td>LinkedIn, GitHub, portfolio URLs</td>
+          <td>Autofill link fields on job forms</td>
+        </tr>
+        <tr>
+          <td><strong>Resume</strong></td>
+          <td>PDF file (base64 encoded)</td>
+          <td>Resume upload autofill, keyword matching</td>
+        </tr>
+        <tr>
+          <td><strong>Application History</strong></td>
+          <td>Job title, company, URL, date applied</td>
+          <td>Track your job applications locally</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>We do <strong>not</strong> collect: passwords, payment information, browsing history unrelated to job pages, or any sensitive personal data beyond what you explicitly provide.</p>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section id="s2">
+    <div class="section-num">2</div>
+    <h2>How We Use Your Data</h2>
+    <ul class="pp-list">
+      <li><strong>Autofill:</strong> Your profile data is used to fill job application form fields automatically on supported platforms.</li>
+      <li><strong>Cover Letter Generation:</strong> Your name, skills, bio, and the job description are sent to our backend to generate an AI-powered cover letter using OpenAI's GPT-3.5 model.</li>
+      <li><strong>Resume Match Score:</strong> Your skills and resume text are compared locally against the job description — no data is sent to any server for this feature.</li>
+      <li><strong>Application Tracking:</strong> Job application details are saved locally on your device and optionally synced to our Supabase database to enable cross-device access.</li>
+      <li><strong>Profile Sync:</strong> Basic profile information (name, email, skills, links) is synced to our backend database to enable future features like dashboard access.</li>
+    </ul>
+    <div class="info-box">
+      ℹ️ Cover letter generation sends your profile + job description to our server. This data is used only to generate your cover letter and is <strong>not stored permanently</strong> by our AI provider (OpenAI).
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="s3">
+    <div class="section-num">3</div>
+    <h2>Data Storage</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Where Stored</th>
+          <th>Who Can Access</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full profile (with resume)</td>
+          <td>Your device (Chrome local storage)</td>
+          <td>Only you, on your device</td>
+        </tr>
+        <tr>
+          <td>Basic profile (no resume)</td>
+          <td>Supabase database (cloud)</td>
+          <td>Famploy team only</td>
+        </tr>
+        <tr>
+          <td>Application history</td>
+          <td>Your device + Supabase</td>
+          <td>Only you</td>
+        </tr>
+        <tr>
+          <td>Cover letter AI requests</td>
+          <td>Not stored (transient)</td>
+          <td>OpenAI processes, does not store</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Your resume file is stored only on your local device and is never uploaded to any server. It is converted to text locally for keyword matching purposes only.</p>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section id="s4">
+    <div class="section-num">4</div>
+    <h2>Third-Party Services</h2>
+    <p>Famploy Copilot uses the following third-party services:</p>
+    <div class="third-party-grid">
+      <div class="tp-card">
+        <span class="tp-icon">🗄️</span>
+        <div class="tp-name">Supabase</div>
+        <div class="tp-use">Database & profile sync</div>
+      </div>
+      <div class="tp-card">
+        <span class="tp-icon">🤖</span>
+        <div class="tp-name">OpenAI</div>
+        <div class="tp-use">AI cover letter generation</div>
+      </div>
+      <div class="tp-card">
+        <span class="tp-icon">🚂</span>
+        <div class="tp-name">Railway</div>
+        <div class="tp-use">Backend API hosting</div>
+      </div>
+    </div>
+    <ul class="pp-list">
+      <li><strong>Supabase:</strong> Stores your basic profile data and application history. Data is stored on Supabase's servers (AWS infrastructure). <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy →</a></li>
+      <li><strong>OpenAI:</strong> Processes cover letter generation requests. Per OpenAI's API policy, API data is not used to train their models and is not retained beyond processing. <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI Privacy Policy →</a></li>
+      <li><strong>Railway:</strong> Hosts our backend API server. No user data is stored on Railway's infrastructure beyond server logs. <a href="https://railway.app/legal/privacy" target="_blank">Railway Privacy Policy →</a></li>
+    </ul>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section id="s5">
+    <div class="section-num">5</div>
+    <h2>Your Rights</h2>
+    <p>You have full control over your data:</p>
+    <ul class="pp-list">
+      <li><strong>Access:</strong> All your data is visible in the extension's onboarding and profile screens.</li>
+      <li><strong>Delete locally:</strong> Click "Reset All Data" in the extension popup to delete all locally stored data immediately.</li>
+      <li><strong>Delete from cloud:</strong> Email us at <strong>privacy@famploy.com</strong> to request deletion of your data from our Supabase database.</li>
+      <li><strong>Export:</strong> Your profile data is accessible via Chrome's developer tools at any time.</li>
+      <li><strong>Opt out of sync:</strong> The extension works fully offline — cloud sync only happens when you save your profile.</li>
+    </ul>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section id="s6">
+    <div class="section-num">6</div>
+    <h2>Data Security</h2>
+    <ul class="pp-list">
+      <li>All communication between the extension and our backend uses <strong>HTTPS encryption</strong>.</li>
+      <li>Your data in Supabase is protected by <strong>row-level security (RLS)</strong> policies.</li>
+      <li>We do <strong>not</strong> store API keys, passwords, or payment information.</li>
+      <li>The extension does not inject scripts from external servers — all code runs locally.</li>
+      <li>We follow industry-standard security practices and regularly review our infrastructure.</li>
+    </ul>
+    <div class="info-box">
+      🛡️ If you discover a security vulnerability, please email us immediately at <strong>security@famploy.com</strong>. We take all reports seriously.
+    </div>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section id="s7">
+    <div class="section-num">7</div>
+    <h2>Children's Privacy</h2>
+    <p>Famploy Copilot is designed for job seekers and is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section id="s8">
+    <div class="section-num">8</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we make significant changes, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="contact-card">
+    <h3>Questions about your privacy?</h3>
+    <p>We're happy to answer any questions about how we handle your data.</p>
+    <a href="mailto:privacy@famploy.com" class="contact-email">
+      ✉️ privacy@famploy.com
+    </a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Famploy · <a href="https://www.famploy.com">famploy.com</a> · Built with ❤️ in India</p>
+  <p style="margin-top:6px;">This Privacy Policy applies to the Famploy Copilot Chrome Extension.</p>
+</footer>
+
+</body>
+</html>
